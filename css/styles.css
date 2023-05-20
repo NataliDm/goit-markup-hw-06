@@ -706,3 +706,41 @@ button {
 .modal-close-icon:focus {
   fill: var(--white-background);
 }
+/*MODAL FORM*/
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.input {
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding-left: 42px;
+}
+.modal-text {
+  margin: 72px 24px 16px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--dark);
+}
+.modal-form-field {
+}
+.modal-form-input-descr {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
+}
+.modal-form-check {
+}
+.modal-form-check-descr {
+}
+.modal-form-btn-sbm {
+}
