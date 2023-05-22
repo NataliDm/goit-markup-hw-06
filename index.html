@@ -520,16 +520,20 @@
               ></a>
             </li>
           </ul>
+        </div>
+        <div class="footer-form-wrapper">
           <form>
             <div footer-form-box>
               <label for="Subcribe" class="footer-form">
-                <p class="footer-form-text">Subscribe</p>
-                <input
-                  type="email"
-                  name="Subcribe"
-                  placeholder="E-mail"
-                  class="footer-input"
-                />
+                <div class="footer-form-descr">
+                  <p class="footer-form-text">Subscribe</p>
+                  <input
+                    type="email"
+                    name="Subcribe"
+                    placeholder="E-mail"
+                    class="footer-input"
+                  />
+                </div>
               </label>
               <button class="footer-subscribe-btn" type="submit">
                 Subscribe
@@ -579,7 +583,7 @@
               </svg>
             </span>
           </label>
-          <label class="modal-form-field"
+          <label class="modal-form-field textarea"
             ><span class="modal-form-input-descr">Comment</span>
             <textarea
               class="modal-form-textarea"
@@ -591,11 +595,13 @@
             id="user-policy"
             type="checkbox"
             name="user-policy"
-            class="modal-form-check visually-hidden"
+            class="modal-form-check"
           />
           <label for="user-policy" class="modal-form-check-descr"
             >I accept the terms and conditions of the&nbsp;
-            <a href="">Privacy Policy</a></label
+            <a href=""
+              ><span class="modal-form-accent-text">Privacy Policy</span>
+            </a></label
           >
           <button type="submit" class="modal-form-btn-sbm">Send</button>
         </form>

@@ -302,19 +302,6 @@ button {
   gap: 24px;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .company-text {
   font-size: 16px;
   line-height: 1.5;
@@ -331,6 +318,18 @@ button {
   color: var(--dark);
   display: block;
   margin-bottom: 8px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /*What we are doing*/
 .tasks {
@@ -662,6 +661,7 @@ button {
   transform: translate(-50%, -50%);
   width: 408px;
   min-height: 576px;
+  padding: 72px 24px 24px;
   background-color: var(--modal-background);
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -706,10 +706,13 @@ button {
 /*MODAL FORM*/
 
 .modal-form {
-  display: flex;
-  flex-direction: column;
-  padding-right: 24px;
-  padding-left: 24px;
+  gap: 8px;
+}
+.modal-form-field {
+  display: block;
+}
+.modal-form-accent-text {
+  color: var(--primary-brand);
 }
 .input {
   height: 40px;
@@ -717,7 +720,6 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding-left: 42px;
-  margin-bottom: 8px;
   transition: border-color var(--anim-middle);
 }
 .input:focus {
@@ -729,13 +731,13 @@ button {
 }
 
 .modal-text {
-  margin: 72px 24px 16px 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--dark);
+  margin-bottom: 16px;
 }
 
 .modal-form-input-descr {
@@ -744,6 +746,9 @@ button {
   letter-spacing: 0.04em;
   color: var(--subtle-text);
   margin-bottom: 4px;
+}
+.modal-form-check {
+  appearance: none;
 }
 .modal-form-check:checked + .modal-form-check-descr::before {
   background-color: var(--pressed-state);
@@ -816,10 +821,14 @@ button {
   border-color: var(--primary-brand);
   outline: none;
 }
+.textarea {
+  margin-bottom: 16px;
+}
 .footer-btn-icon {
 }
 .footer-subscribe-btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   height: 40px;
   width: 165px;
   color: var(--white-background);
@@ -833,6 +842,9 @@ button {
 .footer-subscribe-btn:focus {
   background-color: var(--pressed-state);
   transition: var(--anim-middle);
+}
+.footer-form-wrapper {
+  margin-left: auto;
 }
 .footer-form-box {
 }
@@ -848,6 +860,8 @@ button {
   color: var(--white-background);
   margin-bottom: 16px;
 }
+.footer-form-descr {
+}
 .footer-input {
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -861,6 +875,7 @@ button {
   padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
+  margin-right: 24px;
 }
 .footer-input:hover,
 .footer-input:focus {
