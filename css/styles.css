@@ -571,6 +571,7 @@ button {
 }
 .social-footer {
   display: block;
+  margin-right: 80px;
 }
 .footer-social-icon {
   position: relative;
@@ -845,7 +846,6 @@ button {
   transition: var(--anim-middle);
 }
 .footer-form-wrapper {
-  margin-left: auto;
   display: flex;
 }
 
