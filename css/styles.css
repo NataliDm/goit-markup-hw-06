@@ -712,9 +712,6 @@ button {
 .modal-form-field {
   display: block;
 }
-.modal-form-accent-text {
-  color: var(--primary-brand);
-}
 .input {
   height: 40px;
   width: 100%;
@@ -748,9 +745,6 @@ button {
   color: var(--subtle-text);
   margin-bottom: 4px;
 }
-.modal-form-check {
-  appearance: none;
-}
 .modal-form-check:checked + .modal-form-check-descr::before {
   background-color: var(--pressed-state);
   background-image: url(../images/icons/check.svg);
@@ -766,7 +760,7 @@ button {
   width: 16px;
   height: 16px;
   cursor: pointer;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 3px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   margin-right: 8px;
 }
@@ -808,6 +802,9 @@ button {
 }
 .modal-form-wrapper {
   position: relative;
+}
+.policy-text {
+  color: var(--primary-brand);
 }
 .modal-form-textarea {
   resize: none;
