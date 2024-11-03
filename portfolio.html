@@ -48,6 +48,100 @@
             </li>
           </ul>
         </address>
+        <button class="burger-btn" type="button">
+          <svg class="burger-btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#burger-icon"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!--mobile-menu -->
+
+      <div class="mobile-menu-container is-open">
+        <div>
+          <button class="btn-close-mobile" type="button">
+            <svg class="svg-close" width="8" height="8">
+              <use href="./images/icons.svg#close-black"></use>
+            </svg>
+          </button>
+          <nav>
+            <ul class="nav-list-mobile">
+              <li>
+                <a class="nav-list-item-mobile active" href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li>
+                <a class="nav-list-item-mobile" href="">Portfolio</a>
+              </li>
+              <li>
+                <a class="nav-list-item-mobile" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <address class="address-mobile">
+            <ul class="my-address">
+              <li class="mobil-number">
+                <a class="address-link active" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="e-mail-mobile">
+                <a class="address-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="social-media">
+            <li class="social-media-list-item">
+              <a class="social-link" href="">
+                <svg
+                  class="social-icons-svg color-change-card"
+                  width="16"
+                  height="16"
+                >
+                  <use href="./images/icons.svg#instagram-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-list-item">
+              <a class="social-link" href="">
+                <svg
+                  class="social-icons-svg color-change-card"
+                  width="16"
+                  height="16"
+                >
+                  <use href="./images/icons.svg#twitter-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-list-item">
+              <a class="social-link" href="">
+                <svg
+                  class="social-icons-svg color-change-card"
+                  width="16"
+                  height="16"
+                >
+                  <use href="./images/icons.svg#facebook-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-list-item">
+              <a class="social-link" href="">
+                <svg
+                  class="social-icons-svg color-change-card"
+                  width="16"
+                  height="16"
+                >
+                  <use href="./images/icons.svg#linkedin-2"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -121,6 +215,10 @@
           <ul class="our-team-list">
             <li class="our-team-list-item">
               <img
+                srcset="
+                  ./images/team-member1.jpg   1x,
+                  ./images/team-member12x.jpg 2x
+                "
                 src="./images/team-member1.jpg"
                 alt="mens portret product designer"
                 width="264"
@@ -179,6 +277,10 @@
             </li>
             <li class="our-team-list-item">
               <img
+                srcset="
+                  ./images/team-member2.jpg   1x,
+                  ./images/team-member22x.jpg 2x
+                "
                 src="./images/team-member2.jpg"
                 alt="mens portret frontend developer"
                 width="264"
@@ -237,6 +339,10 @@
             </li>
             <li class="our-team-list-item">
               <img
+                srcset="
+                  ./images/team-member3.jpg   1x,
+                  ./images/team-member32x.jpg 2x
+                "
                 src="./images/team-member3.jpg"
                 alt="womens portret marketing"
                 width="264"
@@ -295,6 +401,10 @@
             </li>
             <li class="our-team-list-item">
               <img
+                srcset="
+                  ./images/team-member4.jpg   1x,
+                  ./images/team-member42x.jpg 2x
+                "
                 src="./images/team-member4.jpg"
                 alt="mens portret designer"
                 width="264"
@@ -361,12 +471,35 @@
           <ul class="our-portfolio-list">
             <li class="portfolio-list-item">
               <div class="layer-box">
-                <img
-                  src="./images/BankingApp.jpg"
-                  alt="banking app"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/BankingApp-mobil.jpg   1x,
+                      ./images/BankingApp-mobil2x.jpg 2x
+                    "
+                    media="(max-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/BankingApp-tablet.jpg   1x,
+                      ./images/BankingApp-tablet2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/BankingApp-comp.jpg   1x,
+                      ./images/BankingApp-comp2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/BankingApp.jpg"
+                    alt="banking app"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="layer-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -380,12 +513,35 @@
             </li>
             <li class="portfolio-list-item">
               <div class="layer-box">
-                <img
-                  src="./images/CashlessPayment.jpg"
-                  alt="cashless payment"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/CashlessPayment-mobil.jpg   1x,
+                      ./images/CashlessPayment-mobil2x.jpg 2x
+                    "
+                    media="(max-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/CashlessPayment-tablet.jpg   1x,
+                      ./images/CashlessPayment-tablet2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/CashlessPayment-comp.jpg   1x,
+                      ./images/CashlessPayment-comp2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/CashlessPayment.jpg"
+                    alt="cashless payment"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="layer-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -399,12 +555,35 @@
             </li>
             <li class="portfolio-list-item">
               <div class="layer-box">
-                <img
-                  src="./images/MeditationApp.jpg"
-                  alt="meditation app"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/MeditationApp-mobil.jpg   1x,
+                      ./images/MeditationApp-mobil2x.jpg 2x
+                    "
+                    media="(max-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/MeditationApp-tablet.jpg   1x,
+                      ./images/MeditationApp-tablet2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/MeditationApp-comp.jpg   1x,
+                      ./images/MeditationApp-comp2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/MeditationApp.jpg"
+                    alt="meditation app"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="layer-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -418,12 +597,35 @@
             </li>
             <li class="portfolio-list-item">
               <div class="layer-box">
-                <img
-                  src="./images/TaxiService.jpg"
-                  alt="taxi service"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Taxi Service-mobil.jpg 1x,
+                      ./images/Taxi Service-mobil2x.jpg 2x
+                    "
+                    media="(max-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Taxi Service-tablet.jpg 1x,
+                      ./images/Taxi Service-tablet.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Taxi Service-comp.jpg 1x,
+                      ./images/Taxi Service-comp.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/TaxiService.jpg"
+                    alt="taxi service"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="layer-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -437,12 +639,35 @@
             </li>
             <li class="portfolio-list-item">
               <div class="layer-box">
-                <img
-                  src="./images/ScreenIllustrations.jpg"
-                  alt="screen illustrations"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/ScreenIllustrations-mobil.jpg   1x,
+                      ./images/ScreenIllustrations-mobil2x.jpg 2x
+                    "
+                    media="(max-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ScreenIllustrations-tablet.jpg   1x,
+                      ./images/ScreenIllustrations-tablet2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ScreenIllustrations-comp.jpg   1x,
+                      ./images/ScreenIllustrations-comp2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/ScreenIllustrations.jpg"
+                    alt="screen illustrations"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="layer-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -456,12 +681,36 @@
             </li>
             <li class="portfolio-list-item">
               <div class="layer-box">
-                <img
-                  src="./images/OnlineCourses.jpg"
-                  alt="online courses"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="./images/OnlineCourses-mobil.jpg"
+                    srcset="
+                      ./images/OnlineCourses-mobil.jpg   1x,
+                      ./images/OnlineCourses-mobil2x.jpg 2x
+                    "
+                    media="(max-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/OnlineCourses-tablet.jpg   1x,
+                      ./images/OnlineCourses-tablet2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/OnlineCourses-comp.jpg   1x,
+                      ./images/OnlineCourses-comp2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <img
+                    src="./images/OnlineCourses.jpg"
+                    alt="online courses"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="layer-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -583,8 +832,8 @@
                 id="user-name"
                 name="user-name"
               />
-              <svg class="modal-icon-svg" width="18" height="24">
-                <use href="./images/icons.svg#person-black-18dp-11"></use>
+              <svg class="modal-icon-svg person" width="18" height="24">
+                <use href="./images/icons.svg#person-black-color"></use>
               </svg>
             </div>
           </div>
@@ -623,14 +872,15 @@
               value="true"
               name="user-privacy"
             />
-            <label class="checkbox-label" for="user-privacy"
-              ><span class="police-privacy">
+            <label class="checkbox-label" for="user-privacy">
+              <span class="police-privacy">
                 <svg class="svg-checkbox" width="10" height="8">
-                  <use href="./images/icons.svg#galka"></use></svg
-              ></span>
-              I accept the terms and conditions of the
-              <a class="link-privacy" href="">Privacy Policy</a>
-            </label>
+                  <use href="./images/icons.svg#galka"></use></svg></span
+              ><span class="textspan">
+                I accept the terms and conditions of the
+                <a class="link-privacy" href="">Privacy Policy</a></span
+              ></label
+            >
           </div>
           <button class="modal-btn" type="submit">Send</button>
         </form>
