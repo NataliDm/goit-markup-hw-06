@@ -1,4 +1,3 @@
-
 body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -1165,7 +1164,6 @@ input:focus + svg {
   justify-content: center;
   align-items: center;
   margin-right: 8px;
-
 }
 .link-privacy {
   color: #4d5ae5;
@@ -1208,7 +1206,6 @@ input:focus + svg {
   }
   .modal {
     max-width: 408px;
-    
   }
 }
 @media screen and (min-width: 1158px) {
