@@ -600,22 +600,22 @@
                 <picture>
                   <source
                     srcset="
-                      ./images/Taxi Service-mobil.jpg 1x,
-                      ./images/Taxi Service-mobil2x.jpg 2x
+                      ./images/TaxiService-mobil.jpg 1x,
+                      ./images/TaxiService-mobil2x.jpg 2x
                     "
                     media="(max-width: 320px)"
                   />
                   <source
                     srcset="
-                      ./images/Taxi Service-tablet.jpg 1x,
-                      ./images/Taxi Service-tablet.jpg 2x
+                      ./images/TaxiService-tablet.jpg 1x,
+                      ./images/TaxiService-tablet2x.jpg 2x
                     "
                     media="(min-width: 768px)"
                   />
                   <source
                     srcset="
-                      ./images/Taxi Service-comp.jpg 1x,
-                      ./images/Taxi Service-comp.jpg 2x
+                      ./images/TaxiService-comp.jpg 1x,
+                      ./images/TaxiService-comp2x.jpg 2x
                     "
                     media="(min-width: 1158px)"
                   />
@@ -683,7 +683,6 @@
               <div class="layer-box">
                 <picture>
                   <source
-                    srcset="./images/OnlineCourses-mobil.jpg"
                     srcset="
                       ./images/OnlineCourses-mobil.jpg   1x,
                       ./images/OnlineCourses-mobil2x.jpg 2x
@@ -865,20 +864,26 @@
             ></textarea>
           </div>
           <div class="checkbox">
-              <input
+            <input
                 class="checkbox-input visually-hidden"
                 type="checkbox"
                 id="user-privacy"
                 value="true"
                 name="user-privacy"
-              />
-              <label class="checkbox-label" for="user-privacy">
+            />
+            <label class="checkbox-label" for="user-privacy">
+              <span class="police-privacy">
                 <svg class="svg-checkbox" width="10" height="8">
-                  <use href="./images/icons.svg#galka"></use>
+                  <use href="./images/icons.svg#galka">
+                    <use>
                 </svg>
-                I accept the terms and conditions of the
-              </label>
-                <a class="link-privacy" href="">Privacy Policy</a>
+              </span>
+              <span>
+                  I accept the terms and conditions of the
+                <a class="link-privacy" href="">
+                Privacy Policy</a>
+              </span>
+            </label>
           </div>
           <button class="modal-btn" type="submit">Send</button>
         </form>

@@ -1018,7 +1018,7 @@ input::placeholder {
   top: 50%;
   left: 50%;
   max-height: 100%;
-  max-width: 288px;
+  max-width: 320px;
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding-left: 16px;
@@ -1212,9 +1212,7 @@ input:focus + svg {
   .modal-overlay {
     max-width: 1158px;
   }
-  .modal {
-    max-width: 408px;
-  }
+
   .modal-icon-svg.person {
     fill: #4d5ae5;
   }
