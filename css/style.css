@@ -1,3 +1,5 @@
+
+
 body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -109,7 +111,6 @@ button {
   justify-content: flex-start;
   flex-direction: row;
   gap: 0px;
-  padding: 16px 0;
 }
 .logo-studio {
   color: #2e2f42;
@@ -119,6 +120,28 @@ button {
   line-height: 21px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
+
+
+.address-link {
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: #434455;
+}
+.address-link.active {
+color: #4d5ae5;
 }
 .burger-btn {
   padding: 0;
@@ -169,24 +192,7 @@ button {
   .nav-list-item:focus {
     color: #404bbf;
   }
-
-  .nav-list-item:active {
-    text-decoration: underline;
-  }
-  .active::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #404bbf;
-    border-radius: 2px;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-  }
-  .active {
-    color: #404bbf;
-  }
+  
   .my-address {
     display: flex;
     flex-direction: column;
@@ -257,8 +263,6 @@ button {
 .hero {
   height: 432px;
   padding-top: 72px;
-  padding-left: 52px;
-  padding-right: 52px;
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -317,8 +321,6 @@ button {
   }
   .hero {
     padding-top: 112px;
-    padding-left: 136px;
-    padding-right: 136px;
     max-width: 768px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -389,6 +391,7 @@ button {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+  text-align: center;
 }
 .features-list-text {
   font-weight: 500;
@@ -406,7 +409,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 24px;
+    gap: 72px 24px;
   }
   .features-title {
     font-weight: 700;
@@ -417,10 +420,11 @@ button {
   .feauters-list-item {
     flex-basis: calc((100% - 24px) / 2);
   }
+  .features-list-title {
+    text-align: start;
+  }
 }
-.features-list-title {
-  text-align: start;
-}
+
 
 @media screen and (min-width: 1158px) {
   .container {
@@ -494,8 +498,6 @@ button {
 }
 
 .our-team-list-item {
-  max-width: 264px;
-  margin-bottom: 72px;
   border-radius: 0 0 4px 4px;
   background: #fff;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -517,6 +519,12 @@ button {
 }
 .card-title {
   padding: 32px 0;
+}
+.our-team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  align-items: center;
 }
 .our-team-list-text {
   font-weight: 400;
@@ -555,22 +563,26 @@ button {
   .container {
     max-width: 768px;
   }
+  .container.team {
+    width: 584px;
+  }
   .our-team-list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 24px;
+    gap: 64px 24px;
   }
 
   .our-team-list-item {
-    width: calc((100%-24px) / 2);
-    margin-left: auto;
-    margin-right: auto;
+    width: calc((100% - 24px) / 2);
   }
 }
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+  }
+  .container.team {
+    width: 1128px;
   }
   .our-team {
     padding: 120px 0;
@@ -579,6 +591,9 @@ button {
   .our-team-list {
     display: flex;
     gap: 24px;
+  }
+  .our-team-list-item {
+    width: calc((100% - 72px) / 4);
   }
 }
 /* our portfolio*/
@@ -598,11 +613,8 @@ button {
   margin-right: auto;
 }
 .portfolio-list-item {
-  max-width: 320px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 48px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .portfolio-list-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -666,15 +678,18 @@ button {
   .our-portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
   }
   .portfolio-list-item {
-    width: calc((100%-24px) / 2);
+    width: calc((100% - 24px) / 2);
   }
 }
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+  }
+  .portfolio-list-item {
+    width: calc((100% - 48px) / 3);
   }
 }
 /*footer*/
@@ -701,6 +716,7 @@ button {
 }
 .footer-box {
   display: block;
+  margin-bottom: 72px;
 }
 .footer-text {
   font-weight: 400;
@@ -708,20 +724,18 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  margin-bottom: 72px;
 }
 
 .social {
   display: flex;
   flex-direction: column;
+  margin-bottom: 72px;
 }
 
 .footer .social-media {
   gap: 16px;
 }
-.social-media {
-  margin-bottom: 72px;
-}
+
 .footer-social-link {
   width: 100%;
   height: 100%;
@@ -822,6 +836,9 @@ input::placeholder {
     padding-top: 96px;
     padding-bottom: 96px;
   }
+  .container.wraper {
+    width: 584px;
+  }
   .wraper {
     display: flex;
     flex-direction: row;
@@ -870,13 +887,19 @@ input::placeholder {
   .social {
     margin-right: 80px;
   }
+  .container.wraper {
+    width: 1440px;
+  }
+  .footer-box {  
+    margin-right: 120px;
+  }
 }
 
 /*header mobile menu*/
 
 .mobile-menu-container {
   background-color: #fff;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
@@ -895,7 +918,9 @@ input::placeholder {
   visibility: visible;
   pointer-events: auto;
 }
-
+.social-media.mobile-list {
+ justify-content: flex-start;
+}
 .btn-close-mobile {
   position: absolute;
   border-radius: 50%;
@@ -950,17 +975,7 @@ input::placeholder {
 .nav-list-item-mobile:active {
   text-decoration: underline;
 }
-.active::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 100%;
-  background-color: #404bbf;
-  border-radius: 2px;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-}
+
 .active {
   color: #404bbf;
 }
@@ -1002,7 +1017,7 @@ input::placeholder {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 288px;
   height: 100%;
   z-index: 999;
   display: flex;
@@ -1018,7 +1033,7 @@ input::placeholder {
   top: 50%;
   left: 50%;
   max-height: 100%;
-  max-width: 320px;
+  width: 288px;
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding-left: 16px;
