@@ -581,7 +581,7 @@ color: #4d5ae5;
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+  max-width: 768px;
   }
   .container.team {
     width: 584px;
@@ -872,6 +872,9 @@ input::placeholder {
   .social-media {
     margin-bottom: 0;
   }
+  .social {
+    margin-bottom: 0;
+  }
   .footer .logo {
     margin-bottom: 16px;
     padding: 0;
@@ -905,12 +908,14 @@ input::placeholder {
   }
   .social {
     margin-right: 80px;
+    margin-bottom: 0;
   }
   .container.wraper {
     width: 1440px;
   }
   .footer-box {  
     margin-right: 120px;
+    margin-bottom: 0;
   }
 }
 
